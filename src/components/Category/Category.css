@@ -1,0 +1,18 @@
+.populares {
+    margin-bottom: 10px;
+    display: flex;
+    width: -webkit-fill-available;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.gifPopulares {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.gifPopulares:hover {
+    color: burlywood;
+}

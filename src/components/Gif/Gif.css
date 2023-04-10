@@ -1,0 +1,19 @@
+.gif {
+    font-size: 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(24, 58, 58);
+    color: aliceblue;
+    padding: 10px;
+    margin: 10px;
+}
+
+.gif:hover {
+    cursor: pointer;
+}
+
+.imgGif {
+    width: 10rem;
+    height: 10rem;
+}
+

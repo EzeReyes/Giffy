@@ -1,0 +1,29 @@
+.ListOfGif {
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    grid-auto-rows: auto;
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+    .ListOfGif {
+        display: grid;
+        grid-template-columns: repeat(3, 0.5fr);
+        grid-auto-rows: auto;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .ListOfGif {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+}
+
+@media (min-width: 325px) and (max-width: 576px) {
+    .ListOfGif {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+}

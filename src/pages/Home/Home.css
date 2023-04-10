@@ -1,0 +1,70 @@
+.gridContainer {
+    display: grid;
+    grid-template-areas:"ult ult tend"
+                        "ult ult cat";
+    width: -webkit-fill-available;
+    }
+
+.ult {
+    grid-area: ult;
+    display: flex;
+    flex-direction: column;
+}
+
+.tend {
+    grid-area: tend;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 5rem;
+}
+
+.cat {
+    grid-area: cat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.titleUlt {
+    margin: 3rem;
+}
+
+.titleCategoryGif {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    margin-top: 2rem;
+    width: 80%;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+    flex-direction: row;
+}
+
+.form h2 {
+    margin-right: 15px;
+}
+
+.text {
+    background-color: #ffffff;
+    cursor: text;
+    border-radius: 5px;
+    text-align: center;
+    color: #000000;
+}
+
+.Buscar {
+    background-color: rgba(105, 28, 248, 0.904);
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 20px;
+    color: white;
+    width: 5rem;
+}
+
