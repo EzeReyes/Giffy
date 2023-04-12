@@ -12,16 +12,14 @@ function TrendingSearch () {
     return (<Category nombre="Tendencias de Giffy" tipos={trends} />)
 }
 
-export default function LazyTrending () {
-    const [show, setShow] = useState(false)
-    const elementRef = useRef()
-
+function useNearScreen ( { distance= "100px"} = {} ) {
+    const [isNearScreen, setShow] = useState(false)
+    const frontRef = useRef()
 
     useEffect(function () {
         let observer
         const onChange = (entries, observer) => {
             const element = entries[0]
-            console.log(element.isIntersecting)
             if (element.isIntersecting) {
                 setShow(true)
                 observer.disconnect()
@@ -32,16 +30,23 @@ export default function LazyTrending () {
             typeof IntersectionObserver !== 'undefined' ? IntersectionObserver : import ('intersection-observer')
         ).then(() => {
             observer = new IntersectionObserver(onChange, {
-                rootMargin: '100px'
+                rootMargin: distance
         })
 
-        observer.observe(elementRef.current)
+        observer.observe(frontRef.current)
     })
 
         return () => observer && observer.disconnect()
     })
 
-    return <div ref={elementRef}>
-        {show ? <TrendingSearch /> : null}
+    return {isNearScreen, frontRef}
+}
+
+export default function LazyTrending () {
+    const {isNearScreen, frontRef} = useNearScreen()
+
+
+    return <div ref={frontRef}>
+        {isNearScreen ? <TrendingSearch /> : null}
     </div>
 }
