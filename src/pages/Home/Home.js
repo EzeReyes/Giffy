@@ -1,9 +1,9 @@
-import ListOfGif from "../../components/ListOfGif/ListOfGif";
-import {useGifs} from '../../Hooks/useGifs/useGifs';
+import ListOfGif from "components/ListOfGif/ListOfGif";
+import {useGifs} from 'Hooks/useGifs/useGifs';
 import { useState } from 'react';
 import "./Home.css"
-import TrendingSearchs from "../../components/TrendingSearchs/TrendingSearchs"
-import Category from "../../components/Category/Category";
+import TrendingSearchs from "components/TrendingSearchs/TrendingSearchs"
+import Category from "components/Category/Category";
 import { useLocation } from "wouter";
 const popularGifs = ["Uruguay", "Brasil", "Colombia", "Messi", "CR7"]
 const futbolGifs = ["Real Madrid", "Boca Juniors", "River Plate", "Barcelona Club", "Maradona"]

@@ -1,6 +1,6 @@
 import React from "react";
-import ListOfGif from '../../components/ListOfGif/ListOfGif';
-import {useGifs} from "../../Hooks/useGifs/useGifs";
+import ListOfGif from 'components/ListOfGif/ListOfGif';
+import {useGifs} from "Hooks/useGifs/useGifs";
 
 
 const SearchResults = ({params}) => { 
