@@ -2,12 +2,8 @@ import ListOfGif from "components/ListOfGif/ListOfGif";
 import {useGifs} from 'Hooks/useGifs/useGifs';
 import { useState } from 'react';
 import "./Home.css"
-import TrendingSearchs from "components/TrendingSearchs/TrendingSearchs"
-import Category from "components/Category/Category";
+import TrendingSearch from "components/TrendingSearchs/TrendingSearch"
 import { useLocation } from "wouter";
-const popularGifs = ["Uruguay", "Brasil", "Colombia", "Messi", "CR7"]
-const futbolGifs = ["Real Madrid", "Boca Juniors", "River Plate", "Barcelona Club", "Maradona"]
-const mascotaGifs = ["Perro", "Gato", "Caballo", "Aguila", "Oso"]
 
 const Home = () => {
 
@@ -45,15 +41,10 @@ return ( <>
             <h3 className='titleUlt'>Última busqueda</h3>
             <ListOfGif gif={gif}/>
         </div>
-        <div className="tend">
-            <TrendingSearchs/>
-        </div>
-        <div className="cat">
-            <Category nombre={"Populares"} tipos={popularGifs} />
-            <Category nombre={"Futbol"} tipos={futbolGifs} />
-            <Category nombre={"Mascotas"} tipos={mascotaGifs} />
-        </div>
     </div>
+    <div className="tend">
+            <TrendingSearch/>
+        </div>
 </>)
 }
 

@@ -1,18 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
-import getTrendingsTerms from "services/trendingSearch";
-import Category from "components/Category/Category"
+import { useState, useEffect, useRef } from "react";
 
-function TrendingSearch () {
-    const [trends, setTrends] = useState([]);
-
-    useEffect( function () {
-        getTrendingsTerms().then(setTrends)
-    }, [])
-
-    return (<Category nombre="Tendencias de Giffy" tipos={trends} />)
-}
-
-function useNearScreen ( { distance= "100px"} = {} ) {
+export default function useNearScreen ( { distance= "100px"} = {} ) {
     const [isNearScreen, setShow] = useState(false)
     const frontRef = useRef()
 
@@ -40,13 +28,4 @@ function useNearScreen ( { distance= "100px"} = {} ) {
     })
 
     return {isNearScreen, frontRef}
-}
-
-export default function LazyTrending () {
-    const {isNearScreen, frontRef} = useNearScreen()
-
-
-    return <div ref={frontRef}>
-        {isNearScreen ? <TrendingSearch /> : null}
-    </div>
 }
