@@ -1,11 +1,11 @@
 .gif {
     font-size: 5px;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: rgb(24, 58, 58);
     color: aliceblue;
-    padding: 10px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min-content;
+    margin: 0 10px;
 }
 
 .gif:hover {
@@ -13,7 +13,7 @@
 }
 
 .imgGif {
-    width: 10rem;
+    width: min-content;
     height: 10rem;
 }
 

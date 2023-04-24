@@ -44,7 +44,7 @@ return ( <>
     </div>
     <div className="tend">
             <TrendingSearch/>
-        </div>
+    </div>
 </>)
 }
 

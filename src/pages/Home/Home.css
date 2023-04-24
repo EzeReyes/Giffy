@@ -1,12 +1,9 @@
 .gridContainer {
     display: grid;
-    grid-template-areas:"ult ult"
-                        "ult ult";
     width: -webkit-fill-available;
     }
 
 .ult {
-    grid-area: ult;
     display: flex;
     flex-direction: column;
 }
@@ -19,7 +16,6 @@
 }
 
 .cat {
-    grid-area: cat;
     display: flex;
     flex-direction: column;
     align-items: center;

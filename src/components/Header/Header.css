@@ -23,7 +23,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: -webkit-fill-available;
         background-color: aliceblue;
         color: cadetblue;
         font-size: 7rem;
@@ -37,7 +37,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: -webkit-fill-available;
         background-color: aliceblue;
         color: cadetblue;
         font-size: 5rem;
@@ -51,7 +51,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: -webkit-fill-available;
         background-color: aliceblue;
         color: #5f9ea0;
         font-size: 3rem;

@@ -1,15 +1,18 @@
 .ListOfGif {
     display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    margin-bottom: 6rem;
+    gap: 1rem;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
     .ListOfGif {
         display: grid;
-        grid-template-columns: repeat(3, 0.5fr);
+        grid-template-columns: repeat(3, 0.35fr);
         grid-auto-rows: auto;
-    }
+        justify-items: center;
+        }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
